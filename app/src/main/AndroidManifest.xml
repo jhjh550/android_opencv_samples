@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="world.hello.kr.co.testopencv">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity_HarrisCorner" />
+        <activity android:name=".Activity_06Threshold" />
+        <activity android:name=".Activity_07AdaptiveThreshold" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".Activity_08SplitColor" />
+        <activity android:name=".Activity_09equalize" />
+        <activity android:name=".OpenCVSampleListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity_11InRange" />
+        <activity android:name=".Activity_BackProj" />
+        <activity android:name=".Activity_Label" />
+        <activity android:name=".Activity_hand" />
+        <activity android:name=".Activity_01EdgeSobel" />
+        <activity android:name=".Activity_02Canny" />
+        <activity android:name=".Activity_03HoughLines" />
+        <activity android:name=".Activity_04HarrisCorner" />
+        <activity android:name=".Activity_VideoCapture" />
+        <activity android:name=".Activity_TemplateMatching" />
+        <activity android:name=".Activity_markerDetect" />
+        <activity android:name=".Activity_siftDetect" />
+        <activity android:name=".Activity_Test" />
+        <activity android:name=".Activity_05FAST_corner" />
+        <activity android:name=".Activity_10Gabor"></activity>
+    </application>
+
+</manifest>

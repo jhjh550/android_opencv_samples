@@ -16,7 +16,7 @@ public class Activity_09equalize extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        src = MyUtils.ResourceToMat("pepper", Imgcodecs.CV_LOAD_IMAGE_COLOR);
+        src = MyUtils.ResourceToMat(this, "pepper", Imgcodecs.CV_LOAD_IMAGE_COLOR);
         dst1 = src.clone();
         Imgproc.cvtColor(dst1, dst1, Imgproc.COLOR_BGR2RGB);
         MyUtils.MatToImageView(this, "original", tv1, dst1, R.id.imageView1);

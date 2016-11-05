@@ -41,7 +41,7 @@ public class Activity_11InRange extends BaseActivity
         seekBar3.setOnSeekBarChangeListener(this);
         seekBar4.setOnSeekBarChangeListener(this);
 
-        src = MyUtils.ResourceToMat("flower1", Imgcodecs.CV_LOAD_IMAGE_COLOR);
+        src = MyUtils.ResourceToMat(this, "flower1", Imgcodecs.CV_LOAD_IMAGE_COLOR);
         Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2RGB);
         MyUtils.MatToImageView(this, "original", tv2, src, R.id.imageView2);
 

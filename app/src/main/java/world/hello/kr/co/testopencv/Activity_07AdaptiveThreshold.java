@@ -33,7 +33,7 @@ public class Activity_07AdaptiveThreshold extends BaseActivity {
 
             }
         });
-        src = MyUtils.ResourceToMat("sudoku");
+        src = MyUtils.ResourceToMat(this, "sudoku");
         MyUtils.MatToImageView(this, "original", tv2, src, R.id.imageView2);
         changeAdaptiveThreshold(100);
 

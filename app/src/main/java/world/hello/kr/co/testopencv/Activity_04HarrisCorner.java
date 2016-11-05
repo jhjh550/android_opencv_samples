@@ -16,7 +16,7 @@ public class Activity_04HarrisCorner extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Mat src1 = MyUtils.ResourceToMat("building");
+        Mat src1 = MyUtils.ResourceToMat(this, "building");
         MyUtils.MatToImageView(this, "", tv1, src1, R.id.imageView1);
 
         Mat harris = new Mat(src1.rows(), src1.cols(), CV_32FC1);

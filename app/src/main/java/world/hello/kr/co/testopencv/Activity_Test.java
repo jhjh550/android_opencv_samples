@@ -12,7 +12,7 @@ public class Activity_Test extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Mat src1 = MyUtils.ResourceToMat("lenna");
+        Mat src1 = MyUtils.ResourceToMat(this, "lenna");
         Imgproc.Canny(src1, dst1, 50, 150);
         MyUtils.MatToImageView(this, "test", tv1, dst1, R.id.imageView1);
     }

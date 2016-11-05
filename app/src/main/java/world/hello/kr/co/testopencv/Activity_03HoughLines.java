@@ -13,7 +13,7 @@ public class Activity_03HoughLines extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Mat src1 = MyUtils.ResourceToMat("building");
+        Mat src1 = MyUtils.ResourceToMat(this, "building");
         MyUtils.MatToImageView(this, "", tv1, src1, R.id.imageView1);
 
         Imgproc.Canny(src1, dst1, 50, 200, 3, false);

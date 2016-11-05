@@ -37,7 +37,7 @@ public class Activity_06Threshold extends BaseActivity {
         });
 
 
-        src = MyUtils.ResourceToMat("lenna");
+        src = MyUtils.ResourceToMat(this, "lenna");
         changeThresholdImage(128);
 
         Imgproc.threshold(src, dst2, value, 255, Imgproc.THRESH_OTSU);

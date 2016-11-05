@@ -1,20 +1,28 @@
 package world.hello.kr.co.testopencv;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+// todo : 1. 파일 없으면 카피하는 식으로 수정 2.
 public class OpenCVSampleListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     ListView listView;
     String[] nameList = {"Test", "Sift Detect",
             "Marker Detect", "Template Matching", "VideoCapture", "Harris",
-            "BackProj", "Labeling", "hand", "01_SobelEdge", "02_Canny",
-            "03_HoughLines", "04_HarrisCorner", "05_FAST corner detect", "06_Threshold",
+            "BackProj", "Labeling", "hand",
+            "01_SobelEdge", "02_Canny", "03_HoughLines(...)", "04_HarrisCorner",
+            "05_FAST corner detect", "06_Threshold",
             "07_Adaptive Threshold", "08_Split Color",
             "09_EqualizeHist", "10_GaborKernel (Operator Error)", "11_InRange"
     };
@@ -37,6 +45,8 @@ public class OpenCVSampleListActivity extends AppCompatActivity implements Adapt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample_list);
 
+        initAsset();
+
         listView = (ListView) findViewById(R.id.listview);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this, android.R.layout.simple_list_item_1, nameList);
@@ -51,4 +61,34 @@ public class OpenCVSampleListActivity extends AppCompatActivity implements Adapt
         intent.putExtra("name", nameList[pos]);
         startActivity(intent);
     }
+
+    private void initAsset(){
+        String dirPath = Environment.getExternalStorageDirectory()+"/TestOpenCV/";
+
+        try {
+            AssetManager assetMgr = getAssets();
+            String[] list = assetMgr.list("/");
+            byte[] buffer = new byte[2048];
+            for(String name : list){
+                InputStream in = assetMgr.open(name);
+                String outPath = dirPath+name;
+                FileOutputStream fout = new FileOutputStream(outPath);
+                int count;
+
+                while((count = in.read(buffer))>0) {
+                    fout.write(buffer);
+                }
+                in.close();
+                fout.close();
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
+
+
+
+

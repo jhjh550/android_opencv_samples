@@ -10,8 +10,8 @@ public class Activity_BackProj extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        src = new Mat();
-        MyUtils.ResourceToMat(this, R.drawable.lenna, src);
-        MyUtils.MatToImageView(this, "BackProj", tv1, src, R.id.imageView1);
+//        src = new Mat();
+//        MyUtils.ResourceToMat(this, R.drawable.lenna, src);
+//        MyUtils.MatToImageView(this, "BackProj", tv1, src, R.id.imageView1);
     }
 }

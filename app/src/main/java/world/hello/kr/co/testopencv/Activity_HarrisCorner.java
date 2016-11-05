@@ -35,37 +35,37 @@ public class Activity_HarrisCorner extends AppCompatActivity {
         Bitmap drawBitmap = null;
 
 
-
-        try {
-            drawImage = Utils.loadResource(this, R.drawable.lenna);
-            Imgproc.cvtColor(drawImage, drawImage, Imgproc.COLOR_BGR2GRAY);//.COLOR_BGR2RGB);
-
-            Mat harris  = new Mat(drawImage.rows(), drawImage.cols(), CV_32FC1);
-            Imgproc.cornerHarris(drawImage, harris, 2,3,0.04);
-
-            Mat harris_norm = new Mat();
-            Core.normalize(harris, harris_norm, 0, 255, Core.NORM_MINMAX, CV_32FC1, new Mat());
-
-            Mat dst = drawImage.clone();
-            Imgproc.cvtColor(dst, dst, Imgproc.COLOR_GRAY2BGR);
-
-            for(int i=0; i<harris.rows(); i++){
-                for(int k=0; k<harris.cols(); k++){
-                    if(harris_norm.get(i,k)[0]>180.f){
-                        Imgproc.circle(dst, new Point(i,k), 5, new Scalar(255,0,0));
-                    }
-                }
-            }
-
-
-
-            drawBitmap = Bitmap.createBitmap(drawImage.cols(), drawImage.rows(),
-                    Bitmap.Config.ARGB_8888);
-            Utils.matToBitmap(dst, drawBitmap);
-            ImageView iv = (ImageView) findViewById(R.id.imageView);
-            iv.setImageBitmap(drawBitmap);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//
+//        try {
+//            drawImage = Utils.loadResource(this, R.drawable.lenna);
+//            Imgproc.cvtColor(drawImage, drawImage, Imgproc.COLOR_BGR2GRAY);//.COLOR_BGR2RGB);
+//
+//            Mat harris  = new Mat(drawImage.rows(), drawImage.cols(), CV_32FC1);
+//            Imgproc.cornerHarris(drawImage, harris, 2,3,0.04);
+//
+//            Mat harris_norm = new Mat();
+//            Core.normalize(harris, harris_norm, 0, 255, Core.NORM_MINMAX, CV_32FC1, new Mat());
+//
+//            Mat dst = drawImage.clone();
+//            Imgproc.cvtColor(dst, dst, Imgproc.COLOR_GRAY2BGR);
+//
+//            for(int i=0; i<harris.rows(); i++){
+//                for(int k=0; k<harris.cols(); k++){
+//                    if(harris_norm.get(i,k)[0]>180.f){
+//                        Imgproc.circle(dst, new Point(i,k), 5, new Scalar(255,0,0));
+//                    }
+//                }
+//            }
+//
+//
+//
+//            drawBitmap = Bitmap.createBitmap(drawImage.cols(), drawImage.rows(),
+//                    Bitmap.Config.ARGB_8888);
+//            Utils.matToBitmap(dst, drawBitmap);
+//            ImageView iv = (ImageView) findViewById(R.id.imageView);
+//            iv.setImageBitmap(drawBitmap);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }

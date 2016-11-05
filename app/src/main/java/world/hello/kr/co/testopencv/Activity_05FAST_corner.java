@@ -20,7 +20,7 @@ public class Activity_05FAST_corner extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Mat src1 = MyUtils.ResourceToMat("building");
+        Mat src1 = MyUtils.ResourceToMat(this, "building");
         FeatureDetector fast = FeatureDetector.create(FeatureDetector.FAST);
         MatOfKeyPoint points = new MatOfKeyPoint();
         fast.detect(src1, points); // Threshold ???

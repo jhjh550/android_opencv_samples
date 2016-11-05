@@ -11,7 +11,7 @@ public class Activity_01EdgeSobel extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Mat src1 = MyUtils.ResourceToMat("lenna");
+        Mat src1 = MyUtils.ResourceToMat(this, "lenna");
         Imgproc.Sobel(src1, dst1, -1,1,0,3,1.0,128);
         MyUtils.MatToImageView(this, "Sobel", tv1, dst1, R.id.imageView1);
 

@@ -18,7 +18,7 @@ public class Activity_08SplitColor extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        src = MyUtils.ResourceToMat("pepper", Imgcodecs.CV_LOAD_IMAGE_COLOR);
+        src = MyUtils.ResourceToMat(this, "pepper", Imgcodecs.CV_LOAD_IMAGE_COLOR);
         Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2YCrCb); //.COLOR_BGR2HSV); //.COLOR_BGR2RGB);
         MyUtils.MatToImageView(this, "YCrCb", tv1, src, R.id.imageView1);
 

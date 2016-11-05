@@ -19,24 +19,24 @@ public class Activity_hand extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        src = new Mat();
-        MyUtils.ResourceToMat(this, R.drawable.hand, src);
-
-        Mat src_hsv = new Mat();
-        Imgproc.cvtColor(src, src_hsv, Imgproc.COLOR_RGB2HSV);//.COLOR_BGR2HSV);
-
-        Mat skin = new Mat();
-        Scalar lowerb = new Scalar(0,40,0);
-        Scalar upperb = new Scalar(20,180,255);
-
-        Core.inRange(src_hsv, lowerb, upperb, skin);
-
-        MyUtils.MatToImageView(this, "hand", tv1, skin, R.id.imageView1);
-
-
-        Mat skin_copy = skin.clone();
-        Imgproc.findContours(skin, contours, new Mat(), Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
+//
+//        src = new Mat();
+//        MyUtils.ResourceToMat(this, R.drawable.hand, src);
+//
+//        Mat src_hsv = new Mat();
+//        Imgproc.cvtColor(src, src_hsv, Imgproc.COLOR_RGB2HSV);//.COLOR_BGR2HSV);
+//
+//        Mat skin = new Mat();
+//        Scalar lowerb = new Scalar(0,40,0);
+//        Scalar upperb = new Scalar(20,180,255);
+//
+//        Core.inRange(src_hsv, lowerb, upperb, skin);
+//
+//        MyUtils.MatToImageView(this, "hand", tv1, skin, R.id.imageView1);
+//
+//
+//        Mat skin_copy = skin.clone();
+//        Imgproc.findContours(skin, contours, new Mat(), Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
 
 
     }

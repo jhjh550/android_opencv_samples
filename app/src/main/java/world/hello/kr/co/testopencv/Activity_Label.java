@@ -22,13 +22,13 @@ public class Activity_Label extends BaseActivity implements SeekBar.OnSeekBarCha
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        src = new Mat();
-        dst1 = new Mat();
-        dst2 = new Mat();
-        MyUtils.ResourceToMat(this, R.drawable.polygon, src);
-        Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2GRAY);
-
-        seekbar.setOnSeekBarChangeListener(this);
+//        src = new Mat();
+//        dst1 = new Mat();
+//        dst2 = new Mat();
+//        MyUtils.ResourceToMat(this, R.drawable.polygon, src);
+//        Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2GRAY);
+//
+//        seekbar.setOnSeekBarChangeListener(this);
     }
 
     @Override

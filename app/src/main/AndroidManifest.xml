@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -26,8 +26,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_11InRange" />
-        <activity android:name=".Activity_BackProj" />
-        <activity android:name=".Activity_Label" />
+        <activity android:name=".Activity_12BackProj" />
+        <activity android:name=".Activity_15labeling" />
         <activity android:name=".Activity_hand" />
         <activity android:name=".Activity_01EdgeSobel" />
         <activity android:name=".Activity_02Canny" />
@@ -39,7 +39,10 @@
         <activity android:name=".Activity_siftDetect" />
         <activity android:name=".Activity_Test" />
         <activity android:name=".Activity_05FAST_corner" />
-        <activity android:name=".Activity_10Gabor"></activity>
+        <activity android:name=".Activity_10Gabor" />
+        <activity android:name=".Activity_13erosion" />
+        <activity android:name=".Activity_14morphology" />
+        <activity android:name=".Activity_16contour"></activity>
     </application>
 
 </manifest>

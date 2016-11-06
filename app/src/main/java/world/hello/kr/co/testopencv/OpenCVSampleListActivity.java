@@ -14,30 +14,32 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-// todo : 1. 파일 없으면 카피하는 식으로 수정 2.
+// todo : 1. 파일 없으면 카피하는 식으로 수정 2. write/camera runtime permission
 public class OpenCVSampleListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     ListView listView;
     String[] nameList = {"Test", "Sift Detect",
             "Marker Detect", "Template Matching", "VideoCapture", "Harris",
-            "BackProj", "Labeling", "hand",
+             "hand",
             "01_SobelEdge", "02_Canny", "03_HoughLines(...)", "04_HarrisCorner",
             "05_FAST corner detect", "06_Threshold",
             "07_Adaptive Threshold", "08_Split Color",
-            "09_EqualizeHist", "10_GaborKernel (Operator Error)", "11_InRange"
+            "09_EqualizeHist", "10_GaborKernel (Operator Error)", "11_InRange",
+            "12_BackProj", "13_Erosion", "14_Morphology", "15_Labeling",
+            "16_Contour"
     };
 
     Class<?>[] classList = {Activity_Test.class, Activity_siftDetect.class,
             Activity_markerDetect.class, Activity_TemplateMatching.class,
             Activity_VideoCapture.class, Activity_HarrisCorner.class,
-
-            Activity_BackProj.class,  Activity_Label.class,
             Activity_hand.class, Activity_01EdgeSobel.class, Activity_02Canny.class,
             Activity_03HoughLines.class, Activity_04HarrisCorner.class,
             Activity_05FAST_corner.class, Activity_06Threshold.class,
             Activity_07AdaptiveThreshold.class, Activity_08SplitColor.class,
             Activity_09equalize.class, Activity_10Gabor.class,
-            Activity_11InRange.class
+            Activity_11InRange.class, Activity_12BackProj.class,
+            Activity_13erosion.class, Activity_14morphology.class,
+            Activity_15labeling.class, Activity_16contour.class,
 
     };
     @Override

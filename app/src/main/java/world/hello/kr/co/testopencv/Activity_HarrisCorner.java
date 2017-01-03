@@ -17,9 +17,6 @@ import java.io.IOException;
 import static org.opencv.core.CvType.CV_32FC1;
 
 
-/**
- * http://webnautes.tistory.com/770
- */
 public class Activity_HarrisCorner extends AppCompatActivity {
 
     static {

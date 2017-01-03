@@ -43,7 +43,8 @@
         <activity android:name=".Activity_13erosion" />
         <activity android:name=".Activity_14morphology" />
         <activity android:name=".Activity_16contour" />
-        <activity android:name=".Activity_17contours2"></activity>
+        <activity android:name=".Activity_17contours2" />
+        <activity android:name=".Activity_18ShapeDetect"></activity>
     </application>
 
 </manifest>

@@ -32,7 +32,8 @@ public class OpenCVSampleListActivity extends AppCompatActivity implements Adapt
             "07_Adaptive Threshold", "08_Split Color",
             "09_EqualizeHist", "10_GaborKernel (Operator Error)", "11_InRange",
             "12_BackProj", "13_Erosion", "14_Morphology", "15_Labeling",
-            "16_Contour( drawcontours? )", "17_Contours2", "18_ShapeDetect"
+            "16_Contour( drawcontours? )", "17_Contours2", "18_ShapeDetect",
+            "19_Hand"
     };
 
     Class<?>[] classList = {Activity_Test.class, Activity_siftDetect.class,
@@ -47,6 +48,7 @@ public class OpenCVSampleListActivity extends AppCompatActivity implements Adapt
             Activity_13erosion.class, Activity_14morphology.class,
             Activity_15labeling.class, Activity_16contour.class,
             Activity_17contours2.class, Activity_18ShapeDetect.class,
+            Activity_19hand.class
 
 
     };

@@ -22,7 +22,7 @@ public class Activity_19hand extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        src = MyUtils.ResourceToMat(this, "hand", Imgcodecs.CV_LOAD_IMAGE_COLOR);
+        src = MyUtils.ResourceToMat(this, "hand04", Imgcodecs.CV_LOAD_IMAGE_COLOR);
         Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2RGB);
         MyUtils.MatToImageView(this, "hand", tv1, src, R.id.imageView1);
 
@@ -30,8 +30,11 @@ public class Activity_19hand extends BaseActivity {
         Imgproc.cvtColor(src, src_hsv, Imgproc.COLOR_RGB2HSV);
 
         Mat skin = new Mat();
-        Scalar lowerb = new Scalar(0,40,0);
-        Scalar upperb = new Scalar(40, 200, 255);
+//        Scalar lowerb = new Scalar(0,40,0);
+//        Scalar upperb = new Scalar(40, 200, 255);
+        Scalar lowerb = new Scalar(0,100,0);
+        Scalar upperb = new Scalar(30, 255, 255);
+
         Core.inRange(src_hsv, lowerb, upperb, skin);
         Imgproc.erode(skin, skin, new Mat());
         Imgproc.dilate(skin, skin, new Mat());

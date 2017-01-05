@@ -44,7 +44,8 @@
         <activity android:name=".Activity_14morphology" />
         <activity android:name=".Activity_16contour" />
         <activity android:name=".Activity_17contours2" />
-        <activity android:name=".Activity_18ShapeDetect"></activity>
+        <activity android:name=".Activity_18ShapeDetect" />
+        <activity android:name=".Activity_19hand"></activity>
     </application>
 
 </manifest>
